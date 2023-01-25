@@ -20,8 +20,8 @@ public class SumController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<SumResponse> sum(@Valid @RequestBody SumRequest request) {
-        Double a = request.getA();
-        Double b = request.getB();
+        Double a = request.a();
+        Double b = request.b();
         BigDecimal result = sumService.sum(a, b);
         return ResponseEntity.ok(SumResponse.builder().a(a).b(b).result(result).build());
     }
