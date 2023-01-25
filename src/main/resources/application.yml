@@ -1,0 +1,6 @@
+server:
+  port: 9000
+
+application:
+  title: Sum Service
+  version: 0.0.1
