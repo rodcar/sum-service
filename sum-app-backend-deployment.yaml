@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sum-app-backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sum-app-backend
+  template:
+    metadata:
+      labels:
+        app: sum-app-backend
+    spec:
+      containers:
+        - name: sum-service-container
+          image: rodcar/sum-service:v1
+          ports:
+            - containerPort: 9000
