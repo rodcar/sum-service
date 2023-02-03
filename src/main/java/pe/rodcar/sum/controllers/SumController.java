@@ -12,7 +12,7 @@ import pe.rodcar.sum.services.SumService;
 import java.math.BigDecimal;
 
 @RestController
-@RequestMapping("/sum")
+@RequestMapping("/api/sum")
 public class SumController {
 
     @Autowired
